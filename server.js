@@ -3,8 +3,9 @@
 const db = require('./db');
 const bodyparser = require('body-parser');
 const StudentRoute = require('./routes/Student_route');
+require('dotenv').config();
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 
 app.use(bodyparser.json());
